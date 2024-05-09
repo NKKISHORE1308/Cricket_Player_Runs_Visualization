@@ -41,9 +41,9 @@ server <- function(input, output) {
     }
     ggplot(data(), aes(x = Name, y = Total.Runs)) + 
       geom_bar(stat = "identity") +
-      labs(title = "Total Runs by Player",
+      labs(title = "Total Runs by single Player",
            x = "Name",
-           y = "Total Runs") +
+           y = "Total Run to score is") + 
       theme(axis.text.y = element_text(angle = 0, hjust = 1))
   })
   
@@ -51,5 +51,3 @@ server <- function(input, output) {
 # Run the application
 shinyApp(ui = ui, server = server)
 
-setwd("D:/Cricket")
-shiny::runApp("cricket.R")
